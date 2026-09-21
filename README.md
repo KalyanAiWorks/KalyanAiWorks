@@ -1,7 +1,5 @@
 <p align="center">
-  <a href="https://github.com/KalyanAiWorks">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=2563EB&center=true&vCenter=true&multiline=true&width=650&height=90&lines=Hey!+I'm+Kalyan+Jatothu+%F0%9F%91%8B;Vibe+Coder+%26+AI+Automation+Builder+%F0%9F%92%BB;B2B+Lead+Gen%2C+Sales+Automation+%26+AI+Agents" alt="Typing SVG" />
-  </a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=2563EB&center=true&vCenter=true&multiline=true&width=700&height=120&lines=Hey!+I'm+Kalyan+Jatothu+%F0%9F%91%8B;Vibe+Coder+%26+AI+Automation+Builder+%F0%9F%92%BB;B2B+Lead+Gen%2C+Sales+Automation+%26+AI+Agents" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -95,17 +93,12 @@
 <h2 align="center">📊 GitHub Analytics & Activity</h2>
 
 <p align="center">
-  <img src="https://github-readme-stats.shion.dev/api?username=KalyanAiWorks&show_icons=true&theme=dark&bg_color=0a0a0a&title_color=2563eb&text_color=f3f4f6&icon_color=2563eb&hide_border=false" width="48%" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=KalyanAiWorks&layout=compact&theme=dark&bg_color=0a0a0a&title_color=2563eb&text_color=f3f4f6&border_color=2563eb&hide_border=false" width="45%" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=KalyanAiWorks&show_icons=true&theme=dark&bg_color=0a0a0a&title_color=2563eb&text_color=f3f4f6&icon_color=2563eb&hide_border=false" width="48%" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KalyanAiWorks&layout=compact&theme=dark&bg_color=0a0a0a&title_color=2563eb&text_color=f3f4f6&border_color=2563eb&hide_border=false" width="45%" alt="Top Languages" />
 </p>
 
 <p align="center">
   <img src="https://streak-stats.demolab.com/?user=KalyanAiWorks&theme=dark&hide_border=false&border=2563eb&background=0a0a0a&ring=2563eb&fire=2563eb" width="60%" alt="GitHub Streak" />
-</p>
-
-<h2 align="center">🏆 GitHub Trophies</h2>
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=KalyanAiWorks&theme=radical&row=1&column=6" alt="Trophies" />
 </p>
 
 ---
