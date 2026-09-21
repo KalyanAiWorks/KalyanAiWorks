@@ -13,7 +13,7 @@
 ![](https://github-readme-stats.shion.dev/api/top-langs/?username=KalyanAiWorks&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=KalyanAiWorks&theme=radical&no-frame=false&margin-w=15)
+![](https://github-profile-trophy.vercel.app/?username=KalyanAiWorks&theme=radical&row=1&column=6)
 
 ---
 [![](https://komarev.com/ghpvc/?username=KalyanAiWorks&color=2563eb)](https://visitcount.itsvg.in)
