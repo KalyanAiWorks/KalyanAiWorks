@@ -96,8 +96,8 @@
 <h2 align="center">📊 GitHub Analytics & Activity</h2>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=KalyanAiWorks&show_icons=true&theme=dark&bg_color=0a0a0a&title_color=2563eb&text_color=f3f4f6&icon_color=2563eb&hide_border=false" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KalyanAiWorks&layout=compact&theme=dark&bg_color=0a0a0a&title_color=2563eb&text_color=f3f4f6&border_color=2563eb&hide_border=false" width="45%" />
+  <img src="https://github-readme-stats.shion.dev/api?username=KalyanAiWorks&show_icons=true&theme=dark&bg_color=0a0a0a&title_color=2563eb&text_color=f3f4f6&icon_color=2563eb&hide_border=false" width="48%" />
+  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=KalyanAiWorks&layout=compact&theme=dark&bg_color=0a0a0a&title_color=2563eb&text_color=f3f4f6&border_color=2563eb&hide_border=false" width="45%" />
 </p>
 
 <p align="center">
