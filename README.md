@@ -58,17 +58,31 @@
 
 ---
 
-<h2 align="center">🔴 Featured Project Spotlight</h2>
+<h2 align="center">🔴 Featured Projects</h2>
 
 <table width="100%" border="0" align="center">
 <tr>
-<td align="center" style="padding:22px;">
+<td width="50%" align="center" style="padding:16px;">
 <h3>🕸️ VFX Company Scraper</h3>
-<p><i>Lead-gen scraper for the VFX/media industry — builds targeted contact databases for outreach.</i></p><br/>
-<p>
-<a href="https://kalyanaiworks.github.io/kalyan-portfolio/index.html" target="_blank"><img src="https://img.shields.io/badge/Portfolio-Visit_Site-2563EB?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0a0a" alt="Portfolio" /></a>&nbsp;&nbsp;
-<a href="https://github.com/KalyanAiWorks/vfx-company-scraper" target="_blank"><img src="https://img.shields.io/badge/Source%20Code-View%20Project-111111?style=for-the-badge&logo=github&logoColor=2563EB&labelColor=0a0a0a" alt="Source Code" /></a>
-</p>
+<p><i>Lead-gen scraper for the VFX/media industry — builds targeted contact databases for outreach.</i></p>
+<a href="https://github.com/KalyanAiWorks/vfx-company-scraper" target="_blank"><img src="https://img.shields.io/badge/Source%20Code-View-111111?style=for-the-badge&logo=github&logoColor=2563EB&labelColor=0a0a0a" /></a>
+</td>
+<td width="50%" align="center" style="padding:16px;">
+<h3>📢 AdsAI Ext Clean</h3>
+<p><i>AI-powered advertising & video production tooling for AdsAI.</i></p>
+<a href="https://github.com/KalyanAiWorks/adsai-ext-clean" target="_blank"><img src="https://img.shields.io/badge/Source%20Code-View-111111?style=for-the-badge&logo=github&logoColor=2563EB&labelColor=0a0a0a" /></a>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center" style="padding:16px;">
+<h3>📈 Trading Agent</h3>
+<p><i>Automated trading systems and tooling built in Python.</i></p>
+<a href="https://github.com/KalyanAiWorks/trading-agent" target="_blank"><img src="https://img.shields.io/badge/Source%20Code-View-111111?style=for-the-badge&logo=github&logoColor=2563EB&labelColor=0a0a0a" /></a>
+</td>
+<td width="50%" align="center" style="padding:16px;">
+<h3>📊 Mike Bags Sales Dashboard</h3>
+<p><i>Mike Bags Sales Intelligence Dashboard.</i></p>
+<a href="https://github.com/KalyanAiWorks/mikebags-dashboard" target="_blank"><img src="https://img.shields.io/badge/Source%20Code-View-111111?style=for-the-badge&logo=github&logoColor=2563EB&labelColor=0a0a0a" /></a>
 </td>
 </tr>
 </table>
