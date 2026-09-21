@@ -1,47 +1,35 @@
 <svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="40%" r="90%">
-      <stop offset="0%" stop-color="#4a0f0f"/>
-      <stop offset="40%" stop-color="#240808"/>
+    <radialGradient id="bg" cx="50%" cy="45%" r="90%">
+      <stop offset="0%" stop-color="#3a0808"/>
+      <stop offset="40%" stop-color="#1a0505"/>
       <stop offset="100%" stop-color="#0a0a0a"/>
     </radialGradient>
-    <radialGradient id="glowcore" cx="50%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="#DC2626" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="scan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#DC2626" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#f87171" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+    <linearGradient id="flame1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="40%" stop-color="#dc2626"/>
+      <stop offset="75%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fde047" stop-opacity="0.7"/>
     </linearGradient>
     <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#DC2626"/>
-      <stop offset="50%" stop-color="#f87171"/>
+      <stop offset="50%" stop-color="#f97316"/>
       <stop offset="100%" stop-color="#DC2626"/>
       <animateTransform attributeName="gradientTransform" type="rotate" values="0 0.5 0.5;360 0.5 0.5" dur="8s" repeatCount="indefinite"/>
     </linearGradient>
     <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="fireglow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5"/>
     </filter>
   </defs>
 
   <rect width="1200" height="300" fill="url(#bg)"/>
-  <rect width="1200" height="300" fill="url(#glowcore)"/>
-
-  <g fill="#f87171" opacity="0.8">
-    <circle cx="110" cy="270" r="2.5"><animate attributeName="cy" values="270;20;270" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/></circle>
-    <circle cx="320" cy="280" r="2.5"><animate attributeName="cy" values="280;10;280" dur="9s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="9s" begin="1s" repeatCount="indefinite"/></circle>
-    <circle cx="880" cy="275" r="2.5"><animate attributeName="cy" values="275;15;275" dur="8s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="8s" begin="2s" repeatCount="indefinite"/></circle>
-    <circle cx="1090" cy="265" r="2.5"><animate attributeName="cy" values="265;25;265" dur="6.5s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="6.5s" begin="0.5s" repeatCount="indefinite"/></circle>
-  </g>
 
   <rect x="8" y="8" width="1184" height="284" fill="none" stroke="url(#borderGrad)" stroke-width="2.5" rx="12">
     <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
-  </rect>
-
-  <rect x="0" y="8" width="80" height="284" fill="url(#scan)" opacity="0.6">
-    <animate attributeName="x" values="0;1120;0" dur="5.5s" repeatCount="indefinite"/>
   </rect>
 
   <g stroke="#DC2626" stroke-width="3" fill="none">
@@ -61,9 +49,37 @@
     BUILDING AUTOMATION THAT SHIPS
   </text>
 
+  <!-- fire flames rising behind name -->
+  <g filter="url(#fireglow)" opacity="0.85">
+    <path fill="url(#flame1)">
+      <animate attributeName="d" dur="0.6s" repeatCount="indefinite" values="
+        M320 180 Q310 140 325 110 Q335 95 320 70 Q345 90 340 120 Q355 100 345 75 Q365 105 350 145 Q345 170 320 180 Z;
+        M320 180 Q305 145 322 105 Q330 90 322 65 Q350 85 342 115 Q360 95 348 70 Q368 100 352 140 Q347 168 320 180 Z;
+        M320 180 Q310 140 325 110 Q335 95 320 70 Q345 90 340 120 Q355 100 345 75 Q365 105 350 145 Q345 170 320 180 Z"/>
+    </path>
+    <path fill="url(#flame1)">
+      <animate attributeName="d" dur="0.5s" begin="0.15s" repeatCount="indefinite" values="
+        M880 180 Q870 140 885 110 Q895 95 880 70 Q905 90 900 120 Q915 100 905 75 Q925 105 910 145 Q905 170 880 180 Z;
+        M880 180 Q865 145 882 105 Q890 90 882 65 Q910 85 902 115 Q920 95 908 70 Q928 100 912 140 Q907 168 880 180 Z;
+        M880 180 Q870 140 885 110 Q895 95 880 70 Q905 90 900 120 Q915 100 905 75 Q925 105 910 145 Q905 170 880 180 Z"/>
+    </path>
+    <path fill="url(#flame1)" opacity="0.7">
+      <animate attributeName="d" dur="0.45s" begin="0.3s" repeatCount="indefinite" values="
+        M380 185 Q373 155 383 130 Q390 118 380 100 Q398 115 394 138 Q406 122 398 105 Q412 128 402 158 Q398 175 380 185 Z;
+        M380 185 Q370 158 384 128 Q388 115 384 95 Q402 112 396 135 Q410 118 400 102 Q416 125 404 155 Q400 173 380 185 Z;
+        M380 185 Q373 155 383 130 Q390 118 380 100 Q398 115 394 138 Q406 122 398 105 Q412 128 402 158 Q398 175 380 185 Z"/>
+    </path>
+    <path fill="url(#flame1)" opacity="0.7">
+      <animate attributeName="d" dur="0.55s" begin="0.2s" repeatCount="indefinite" values="
+        M820 185 Q813 155 823 130 Q830 118 820 100 Q838 115 834 138 Q846 122 838 105 Q852 128 842 158 Q838 175 820 185 Z;
+        M820 185 Q810 158 824 128 Q828 115 824 95 Q842 112 836 135 Q850 118 840 102 Q856 125 844 155 Q840 173 820 185 Z;
+        M820 185 Q813 155 823 130 Q830 118 820 100 Q838 115 834 138 Q846 122 838 105 Q852 128 842 158 Q838 175 820 185 Z"/>
+    </path>
+  </g>
+
   <text x="600" y="150" text-anchor="middle" font-family="Fira Code, monospace" font-weight="800" font-size="58" fill="#ffffff" letter-spacing="2" filter="url(#glow)">
     KALYAN JATOTHU
-    <animateTransform attributeName="transform" type="scale" values="1;1.02;1" dur="3s" repeatCount="indefinite" additive="sum"/>
+    <animate attributeName="fill" values="#ffffff;#fde047;#ffffff" dur="1.2s" repeatCount="indefinite"/>
   </text>
 
   <text x="600" y="196" text-anchor="middle" font-family="Fira Code, monospace" font-size="17" fill="#f87171" letter-spacing="1">
