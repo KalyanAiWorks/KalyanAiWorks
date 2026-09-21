@@ -2,54 +2,78 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0a0a0a"/>
-      <stop offset="100%" stop-color="#111827"/>
+      <stop offset="50%" stop-color="#0f1b3d"/>
+      <stop offset="100%" stop-color="#0a0a0a">
+        <animate attributeName="offset" values="1;0.5;1" dur="6s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
+    <radialGradient id="glowbg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
     <linearGradient id="scan" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#2563EB" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#93c5fd" stop-opacity="1"/>
       <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
     </linearGradient>
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
   <rect width="1200" height="260" fill="url(#bg)"/>
-  <rect x="8" y="8" width="1184" height="244" fill="none" stroke="#2563EB" stroke-width="2" rx="10"/>
+  <rect width="1200" height="260" fill="url(#glowbg)"/>
 
-  <!-- scanning light sweep -->
-  <rect x="0" y="8" width="60" height="244" fill="url(#scan)">
-    <animate attributeName="x" values="0;1140;0" dur="6s" repeatCount="indefinite"/>
+  <!-- circuit lines -->
+  <g stroke="#1e3a8a" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M0 40 H300 V90 H600" />
+    <path d="M1200 40 H900 V90 H600" />
+    <path d="M0 220 H250 V180 H550" />
+    <path d="M1200 220 H950 V180 H650" />
+  </g>
+  <g fill="#60a5fa">
+    <circle r="3"><animateMotion dur="4s" repeatCount="indefinite" path="M0 40 H300 V90 H600"/></circle>
+    <circle r="3"><animateMotion dur="4s" begin="1s" repeatCount="indefinite" path="M1200 40 H900 V90 H600"/></circle>
+    <circle r="3"><animateMotion dur="5s" begin="0.5s" repeatCount="indefinite" path="M0 220 H250 V180 H550"/></circle>
+    <circle r="3"><animateMotion dur="5s" begin="1.5s" repeatCount="indefinite" path="M1200 220 H950 V180 H650"/></circle>
+  </g>
+
+  <!-- floating particles -->
+  <g fill="#2563EB">
+    <circle cx="100" cy="230" r="2"><animate attributeName="cy" values="230;20;230" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="240" r="2"><animate attributeName="cy" values="240;10;240" dur="9s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="9s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="900" cy="235" r="2"><animate attributeName="cy" values="235;15;235" dur="8s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="8s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="1100" cy="225" r="2"><animate attributeName="cy" values="225;25;225" dur="6s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="6s" begin="0.5s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- pulsing border -->
+  <rect x="8" y="8" width="1184" height="244" fill="none" stroke="#2563EB" stroke-width="2" rx="10">
+    <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- pulsing corner brackets -->
-  <g stroke="#2563EB" stroke-width="3" fill="none">
-    <path d="M24 24 L24 50 M24 24 L50 24">
-      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-    </path>
-    <path d="M1176 24 L1176 50 M1176 24 L1150 24">
-      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" begin="0.3s" repeatCount="indefinite"/>
-    </path>
-    <path d="M24 236 L24 210 M24 236 L50 236">
-      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" begin="0.6s" repeatCount="indefinite"/>
-    </path>
-    <path d="M1176 236 L1176 210 M1176 236 L1150 236">
-      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" begin="0.9s" repeatCount="indefinite"/>
-    </path>
+  <!-- scanning sweep -->
+  <rect x="0" y="8" width="70" height="244" fill="url(#scan)" opacity="0.7">
+    <animate attributeName="x" values="0;1130;0" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- pulsing corners -->
+  <g stroke="#60a5fa" stroke-width="3" fill="none">
+    <path d="M24 24 L24 50 M24 24 L50 24"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></path>
+    <path d="M1176 24 L1176 50 M1176 24 L1150 24"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.6s" begin="0.4s" repeatCount="indefinite"/></path>
+    <path d="M24 236 L24 210 M24 236 L50 236"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.6s" begin="0.8s" repeatCount="indefinite"/></path>
+    <path d="M1176 236 L1176 210 M1176 236 L1150 236"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.6s" begin="1.2s" repeatCount="indefinite"/></path>
   </g>
 
   <text x="600" y="90" text-anchor="middle" font-family="Fira Code, monospace" font-size="14" fill="#2563EB" letter-spacing="4" filter="url(#glow)">
     BUILDING AUTOMATION THAT SHIPS
-    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
   </text>
 
-  <text x="600" y="140" text-anchor="middle" font-family="Fira Code, monospace" font-weight="700" font-size="42" fill="#f3f4f6" letter-spacing="2" filter="url(#glow)">
+  <text x="600" y="140" text-anchor="middle" font-family="Fira Code, monospace" font-weight="700" font-size="44" fill="#f3f4f6" letter-spacing="2" filter="url(#glow)">
     KALYAN JATOTHU
-    <animate attributeName="fill" values="#f3f4f6;#93c5fd;#f3f4f6" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#f3f4f6;#60a5fa;#f3f4f6" dur="3s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="scale" values="1;1.03;1" dur="3s" repeatCount="indefinite" additive="sum"/>
   </text>
 
   <text x="600" y="175" text-anchor="middle" font-family="Fira Code, monospace" font-size="15" fill="#60a5fa" letter-spacing="2">
@@ -57,7 +81,7 @@
   </text>
 
   <text x="600" y="215" text-anchor="middle" font-family="Fira Code, monospace" font-style="italic" font-size="13" fill="#9ca3af" letter-spacing="1">
-    "TURNING IDEAS INTO PRODUCTION AUTOMATION"<tspan fill="#2563EB">_</tspan>
+    "TURNING IDEAS INTO PRODUCTION AUTOMATION"<tspan fill="#60a5fa">_</tspan>
     <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
   </text>
 </svg>
