@@ -1,9 +1,13 @@
-<svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#2a0a0a"/>
-      <stop offset="60%" stop-color="#120505"/>
+    <radialGradient id="bg" cx="50%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#4a0f0f"/>
+      <stop offset="40%" stop-color="#240808"/>
       <stop offset="100%" stop-color="#0a0a0a"/>
+    </radialGradient>
+    <radialGradient id="glowcore" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#DC2626" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="scan" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#DC2626" stop-opacity="0"/>
@@ -16,60 +20,61 @@
       <stop offset="100%" stop-color="#DC2626"/>
       <animateTransform attributeName="gradientTransform" type="rotate" values="0 0.5 0.5;360 0.5 0.5" dur="8s" repeatCount="indefinite"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
-  <rect width="1200" height="280" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#glowcore)"/>
 
   <g fill="#f87171" opacity="0.8">
-    <circle cx="110" cy="250" r="2.5"><animate attributeName="cy" values="250;20;250" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/></circle>
-    <circle cx="320" cy="260" r="2.5"><animate attributeName="cy" values="260;10;260" dur="9s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="9s" begin="1s" repeatCount="indefinite"/></circle>
-    <circle cx="880" cy="255" r="2.5"><animate attributeName="cy" values="255;15;255" dur="8s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="8s" begin="2s" repeatCount="indefinite"/></circle>
-    <circle cx="1090" cy="245" r="2.5"><animate attributeName="cy" values="245;25;245" dur="6.5s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="6.5s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="110" cy="270" r="2.5"><animate attributeName="cy" values="270;20;270" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="320" cy="280" r="2.5"><animate attributeName="cy" values="280;10;280" dur="9s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="9s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="880" cy="275" r="2.5"><animate attributeName="cy" values="275;15;275" dur="8s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="8s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="1090" cy="265" r="2.5"><animate attributeName="cy" values="265;25;265" dur="6.5s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="6.5s" begin="0.5s" repeatCount="indefinite"/></circle>
   </g>
 
-  <rect x="8" y="8" width="1184" height="264" fill="none" stroke="url(#borderGrad)" stroke-width="2.5" rx="12">
+  <rect x="8" y="8" width="1184" height="284" fill="none" stroke="url(#borderGrad)" stroke-width="2.5" rx="12">
     <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
   </rect>
 
-  <rect x="0" y="8" width="80" height="264" fill="url(#scan)" opacity="0.6">
+  <rect x="0" y="8" width="80" height="284" fill="url(#scan)" opacity="0.6">
     <animate attributeName="x" values="0;1120;0" dur="5.5s" repeatCount="indefinite"/>
   </rect>
 
   <g stroke="#DC2626" stroke-width="3" fill="none">
     <path d="M26 26 L26 54 M26 26 L54 26"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/></path>
     <path d="M1174 26 L1174 54 M1174 26 L1146 26"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.8s" begin="0.45s" repeatCount="indefinite"/></path>
-    <path d="M26 254 L26 226 M26 254 L54 254"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.8s" begin="0.9s" repeatCount="indefinite"/></path>
-    <path d="M1174 254 L1174 226 M1174 254 L1146 254"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.8s" begin="1.35s" repeatCount="indefinite"/></path>
+    <path d="M26 274 L26 246 M26 274 L54 274"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.8s" begin="0.9s" repeatCount="indefinite"/></path>
+    <path d="M1174 274 L1174 246 M1174 274 L1146 274"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.8s" begin="1.35s" repeatCount="indefinite"/></path>
   </g>
 
-  <rect x="440" y="48" width="320" height="34" rx="17" fill="#1a0505" stroke="#DC2626" stroke-width="1.5">
+  <rect x="435" y="42" width="330" height="34" rx="17" fill="#1a0505" stroke="#DC2626" stroke-width="1.5">
     <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
   </rect>
-  <circle cx="465" cy="65" r="4" fill="#DC2626">
+  <circle cx="460" cy="59" r="4" fill="#DC2626">
     <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
   </circle>
-  <text x="615" y="70" text-anchor="middle" font-family="Fira Code, monospace" font-weight="700" font-size="13" fill="#f87171" letter-spacing="2">
+  <text x="615" y="64" text-anchor="middle" font-family="Fira Code, monospace" font-weight="700" font-size="13" fill="#f87171" letter-spacing="2">
     BUILDING AUTOMATION THAT SHIPS
   </text>
 
-  <text x="600" y="140" text-anchor="middle" font-family="Fira Code, monospace" font-weight="800" font-size="52" fill="#ffffff" letter-spacing="2" filter="url(#glow)">
+  <text x="600" y="150" text-anchor="middle" font-family="Fira Code, monospace" font-weight="800" font-size="58" fill="#ffffff" letter-spacing="2" filter="url(#glow)">
     KALYAN JATOTHU
     <animateTransform attributeName="transform" type="scale" values="1;1.02;1" dur="3s" repeatCount="indefinite" additive="sum"/>
   </text>
 
-  <text x="600" y="180" text-anchor="middle" font-family="Fira Code, monospace" font-size="16" fill="#f87171" letter-spacing="1">
+  <text x="600" y="196" text-anchor="middle" font-family="Fira Code, monospace" font-size="17" fill="#f87171" letter-spacing="1">
     BUSINESS DEV &amp; AI AUTOMATION · <tspan font-weight="700" fill="#ffffff">SALES AUTOMATION</tspan> · AI AGENTS
   </text>
 
-  <path d="M600 198 l6 8 l-6 8 l-6 -8 z" fill="#DC2626">
+  <path d="M600 216 l6 8 l-6 8 l-6 -8 z" fill="#DC2626">
     <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
   </path>
 
-  <text x="600" y="235" text-anchor="middle" font-family="Fira Code, monospace" font-size="13" fill="#9ca3af" letter-spacing="1">
+  <text x="600" y="255" text-anchor="middle" font-family="Fira Code, monospace" font-size="13" fill="#9ca3af" letter-spacing="1">
     <tspan fill="#DC2626">&lt;/&gt;</tspan> TURNING IDEAS INTO PRODUCTION AUTOMATION<tspan fill="#f87171">_</tspan>
     <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
   </text>
