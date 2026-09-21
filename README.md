@@ -13,9 +13,9 @@
 ![](https://github-readme-stats.shion.dev/api/top-langs/?username=KalyanAiWorks&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=KalyanAiWorks&theme=radical&no-frame=false&no-bg=true&margin-w=4)
+![](https://github-profile-trophy.vercel.app/?username=KalyanAiWorks&theme=radical&no-frame=false&margin-w=15)
 
 ---
-[![](https://komarev.com/ghpvc/?username=KalyanAiWorks&icon=0&color=0)](https://visitcount.itsvg.in)
+[![](https://komarev.com/ghpvc/?username=KalyanAiWorks&color=2563eb)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
