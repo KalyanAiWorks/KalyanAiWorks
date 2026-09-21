@@ -4,6 +4,11 @@
       <stop offset="0%" stop-color="#0a0a0a"/>
       <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
+    <linearGradient id="scan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </linearGradient>
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
@@ -16,17 +21,35 @@
   <rect width="1200" height="260" fill="url(#bg)"/>
   <rect x="8" y="8" width="1184" height="244" fill="none" stroke="#2563EB" stroke-width="2" rx="10"/>
 
-  <path d="M24 24 L24 50 M24 24 L50 24" stroke="#2563EB" stroke-width="3" fill="none"/>
-  <path d="M1176 24 L1176 50 M1176 24 L1150 24" stroke="#2563EB" stroke-width="3" fill="none"/>
-  <path d="M24 236 L24 210 M24 236 L50 236" stroke="#2563EB" stroke-width="3" fill="none"/>
-  <path d="M1176 236 L1176 210 M1176 236 L1150 236" stroke="#2563EB" stroke-width="3" fill="none"/>
+  <!-- scanning light sweep -->
+  <rect x="0" y="8" width="60" height="244" fill="url(#scan)">
+    <animate attributeName="x" values="0;1140;0" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- pulsing corner brackets -->
+  <g stroke="#2563EB" stroke-width="3" fill="none">
+    <path d="M24 24 L24 50 M24 24 L50 24">
+      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1176 24 L1176 50 M1176 24 L1150 24">
+      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M24 236 L24 210 M24 236 L50 236">
+      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1176 236 L1176 210 M1176 236 L1150 236">
+      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+    </path>
+  </g>
 
   <text x="600" y="90" text-anchor="middle" font-family="Fira Code, monospace" font-size="14" fill="#2563EB" letter-spacing="4" filter="url(#glow)">
     BUILDING AUTOMATION THAT SHIPS
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
   </text>
 
   <text x="600" y="140" text-anchor="middle" font-family="Fira Code, monospace" font-weight="700" font-size="42" fill="#f3f4f6" letter-spacing="2" filter="url(#glow)">
     KALYAN JATOTHU
+    <animate attributeName="fill" values="#f3f4f6;#93c5fd;#f3f4f6" dur="4s" repeatCount="indefinite"/>
   </text>
 
   <text x="600" y="175" text-anchor="middle" font-family="Fira Code, monospace" font-size="15" fill="#60a5fa" letter-spacing="2">
@@ -34,6 +57,7 @@
   </text>
 
   <text x="600" y="215" text-anchor="middle" font-family="Fira Code, monospace" font-style="italic" font-size="13" fill="#9ca3af" letter-spacing="1">
-    "TURNING IDEAS INTO PRODUCTION AUTOMATION"
+    "TURNING IDEAS INTO PRODUCTION AUTOMATION"<tspan fill="#2563EB">_</tspan>
+    <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
   </text>
 </svg>
