@@ -1,87 +1,96 @@
-<svg width="1200" height="260" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0a0a"/>
-      <stop offset="50%" stop-color="#0f1b3d"/>
-      <stop offset="100%" stop-color="#0a0a0a">
-        <animate attributeName="offset" values="1;0.5;1" dur="6s" repeatCount="indefinite"/>
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="50%" stop-color="#12122a"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6">
+        <animate attributeName="stop-color" values="#8b5cf6;#06b6d4;#8b5cf6" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#06b6d4">
+        <animate attributeName="stop-color" values="#06b6d4;#8b5cf6;#06b6d4" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#8b5cf6">
+        <animate attributeName="stop-color" values="#8b5cf6;#06b6d4;#8b5cf6" dur="4s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+      <animateTransform attributeName="gradientTransform" type="rotate" values="0 0.5 0.5;360 0.5 0.5" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
     <radialGradient id="glowbg" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="scan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2563EB" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#93c5fd" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
     </linearGradient>
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feGaussianBlur stdDeviation="7" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
-  <rect width="1200" height="260" fill="url(#bg)"/>
-  <rect width="1200" height="260" fill="url(#glowbg)"/>
+  <rect width="1200" height="280" fill="url(#bg)"/>
+  <rect width="1200" height="280" fill="url(#glowbg)"/>
 
-  <!-- circuit lines -->
-  <g stroke="#1e3a8a" stroke-width="1.5" fill="none" opacity="0.6">
-    <path d="M0 40 H300 V90 H600" />
-    <path d="M1200 40 H900 V90 H600" />
-    <path d="M0 220 H250 V180 H550" />
-    <path d="M1200 220 H950 V180 H650" />
+  <g stroke="#4c1d95" stroke-width="1.5" fill="none" opacity="0.5">
+    <path d="M0 45 H320 V95 H620" />
+    <path d="M1200 45 H880 V95 H620" />
+    <path d="M0 235 H270 V190 H560" />
+    <path d="M1200 235 H930 V190 H660" />
   </g>
-  <g fill="#60a5fa">
-    <circle r="3"><animateMotion dur="4s" repeatCount="indefinite" path="M0 40 H300 V90 H600"/></circle>
-    <circle r="3"><animateMotion dur="4s" begin="1s" repeatCount="indefinite" path="M1200 40 H900 V90 H600"/></circle>
-    <circle r="3"><animateMotion dur="5s" begin="0.5s" repeatCount="indefinite" path="M0 220 H250 V180 H550"/></circle>
-    <circle r="3"><animateMotion dur="5s" begin="1.5s" repeatCount="indefinite" path="M1200 220 H950 V180 H650"/></circle>
-  </g>
-
-  <!-- floating particles -->
-  <g fill="#2563EB">
-    <circle cx="100" cy="230" r="2"><animate attributeName="cy" values="230;20;230" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/></circle>
-    <circle cx="300" cy="240" r="2"><animate attributeName="cy" values="240;10;240" dur="9s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="9s" begin="1s" repeatCount="indefinite"/></circle>
-    <circle cx="900" cy="235" r="2"><animate attributeName="cy" values="235;15;235" dur="8s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="8s" begin="2s" repeatCount="indefinite"/></circle>
-    <circle cx="1100" cy="225" r="2"><animate attributeName="cy" values="225;25;225" dur="6s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="6s" begin="0.5s" repeatCount="indefinite"/></circle>
+  <g fill="#22d3ee">
+    <circle r="3"><animateMotion dur="4.5s" repeatCount="indefinite" path="M0 45 H320 V95 H620"/></circle>
+    <circle r="3"><animateMotion dur="4.5s" begin="1.2s" repeatCount="indefinite" path="M1200 45 H880 V95 H620"/></circle>
+    <circle r="3"><animateMotion dur="5.5s" begin="0.6s" repeatCount="indefinite" path="M0 235 H270 V190 H560"/></circle>
+    <circle r="3"><animateMotion dur="5.5s" begin="1.8s" repeatCount="indefinite" path="M1200 235 H930 V190 H660"/></circle>
   </g>
 
-  <!-- pulsing border -->
-  <rect x="8" y="8" width="1184" height="244" fill="none" stroke="#2563EB" stroke-width="2" rx="10">
-    <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+  <g fill="#a78bfa">
+    <circle cx="110" cy="250" r="2.5"><animate attributeName="cy" values="250;20;250" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="320" cy="260" r="2.5"><animate attributeName="cy" values="260;10;260" dur="9s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="9s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="880" cy="255" r="2.5"><animate attributeName="cy" values="255;15;255" dur="8s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="8s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="1090" cy="245" r="2.5"><animate attributeName="cy" values="245;25;245" dur="6.5s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="6.5s" begin="0.5s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <rect x="8" y="8" width="1184" height="264" fill="none" stroke="url(#borderGrad)" stroke-width="2.5" rx="12">
+    <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- scanning sweep -->
-  <rect x="0" y="8" width="70" height="244" fill="url(#scan)" opacity="0.7">
-    <animate attributeName="x" values="0;1130;0" dur="5s" repeatCount="indefinite"/>
+  <rect x="0" y="8" width="80" height="264" fill="url(#scan)" opacity="0.7">
+    <animate attributeName="x" values="0;1120;0" dur="5.5s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- pulsing corners -->
-  <g stroke="#60a5fa" stroke-width="3" fill="none">
-    <path d="M24 24 L24 50 M24 24 L50 24"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></path>
-    <path d="M1176 24 L1176 50 M1176 24 L1150 24"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.6s" begin="0.4s" repeatCount="indefinite"/></path>
-    <path d="M24 236 L24 210 M24 236 L50 236"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.6s" begin="0.8s" repeatCount="indefinite"/></path>
-    <path d="M1176 236 L1176 210 M1176 236 L1150 236"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.6s" begin="1.2s" repeatCount="indefinite"/></path>
+  <g stroke="#a78bfa" stroke-width="3" fill="none">
+    <path d="M26 26 L26 54 M26 26 L54 26"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/></path>
+    <path d="M1174 26 L1174 54 M1174 26 L1146 26"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.8s" begin="0.45s" repeatCount="indefinite"/></path>
+    <path d="M26 254 L26 226 M26 254 L54 254"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.8s" begin="0.9s" repeatCount="indefinite"/></path>
+    <path d="M1174 254 L1174 226 M1174 254 L1146 254"><animate attributeName="stroke-opacity" values="1;0.2;1" dur="1.8s" begin="1.35s" repeatCount="indefinite"/></path>
   </g>
 
-  <text x="600" y="90" text-anchor="middle" font-family="Fira Code, monospace" font-size="14" fill="#2563EB" letter-spacing="4" filter="url(#glow)">
+  <text x="600" y="95" text-anchor="middle" font-family="Fira Code, monospace" font-size="14" fill="#a78bfa" letter-spacing="4" filter="url(#glow)">
     BUILDING AUTOMATION THAT SHIPS
     <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
   </text>
 
-  <text x="600" y="140" text-anchor="middle" font-family="Fira Code, monospace" font-weight="700" font-size="44" fill="#f3f4f6" letter-spacing="2" filter="url(#glow)">
+  <text x="600" y="155" text-anchor="middle" font-family="Fira Code, monospace" font-weight="700" font-size="52" fill="url(#titleGrad)" letter-spacing="2" filter="url(#glow)">
     KALYAN JATOTHU
-    <animate attributeName="fill" values="#f3f4f6;#60a5fa;#f3f4f6" dur="3s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="scale" values="1;1.03;1" dur="3s" repeatCount="indefinite" additive="sum"/>
+    <animateTransform attributeName="transform" type="scale" values="1;1.025;1" dur="3s" repeatCount="indefinite" additive="sum"/>
   </text>
 
-  <text x="600" y="175" text-anchor="middle" font-family="Fira Code, monospace" font-size="15" fill="#60a5fa" letter-spacing="2">
+  <text x="600" y="192" text-anchor="middle" font-family="Fira Code, monospace" font-size="15" fill="#22d3ee" letter-spacing="2">
     BUSINESS DEV &amp; AI AUTOMATION SPECIALIST · B2B LEAD GEN · SALES AUTOMATION
   </text>
 
-  <text x="600" y="215" text-anchor="middle" font-family="Fira Code, monospace" font-style="italic" font-size="13" fill="#9ca3af" letter-spacing="1">
-    "TURNING IDEAS INTO PRODUCTION AUTOMATION"<tspan fill="#60a5fa">_</tspan>
+  <text x="600" y="230" text-anchor="middle" font-family="Fira Code, monospace" font-style="italic" font-size="13" fill="#c4b5fd" letter-spacing="1">
+    "TURNING IDEAS INTO PRODUCTION AUTOMATION"<tspan fill="#22d3ee">_</tspan>
     <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
   </text>
 </svg>
