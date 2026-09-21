@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg?v=5" width="100%" alt="Kalyan Jatothu Header" />
+  <img src="assets/header.svg?v=6" width="100%" alt="Kalyan Jatothu Header" />
 </p>
 
 <p align="center">
